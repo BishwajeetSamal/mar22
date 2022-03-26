@@ -1,0 +1,357 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 61%;
+   scroll-behavior: smooth; 
+}
+
+body{
+    --main-color:#283526;
+    --primary-color:rgba(56, 56, 56, 0.692);
+    --button-background:#4b709e;
+    --primary-button-background:#fe7649;
+    --bacground-color:#e2efff;
+}
+
+h1,h2{
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--main-color);
+}
+
+h4,h3{
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--main-color);
+}
+
+h3{
+    font-weight: 750;
+    font-size: 2.2rem;
+    line-height: 6rem;
+    text-transform: capitalize;
+}
+
+p,a,li,button{
+    font-family: cursive ;
+    color: var(--primary-color);
+}
+
+p{
+    font-size: 1.8rem;
+    line-height: 150%;
+    font-style: normal;
+    font-weight: normal;
+}
+
+a{
+    text-decoration: none;
+     cursor: pointer; 
+}
+
+li{
+    list-style: none;
+}
+
+button{
+    padding: 1rem 3rem;
+    border-radius: 20px;
+    border: none;
+    line-height: 2.6rem;
+    text-transform: capitalize;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+/* ----------------------------------------------------- */
+
+header{
+    padding:0 20rem;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+}
+
+.sub-menu{
+    display: flex;  
+}
+
+.sub-menu a li{
+    margin-right: 3rem;
+    font-size: 2rem;
+    line-height: 3rem;
+    text-transform: capitalize;
+    
+}
+
+.sub-menu a li:hover{
+    color: var(--button-background);
+    
+}
+
+/* right side menu */
+
+
+header .right-side-menu .sub-menu{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+header .right-side-menu .sub-menu a{
+    margin-right: 3rem;
+    padding: auto;
+    cursor: pointer;
+}
+
+header .right-side-menu .sub-menu button:hover{
+   background-color: var(--main-color);
+   color: #ffff;
+}
+
+
+.main-section{
+    padding: 0 20rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* justify-content: space-between; */
+     align-items: center; 
+     margin-bottom: 10rem;
+}
+
+.main-section h1{
+    width: 30rem;
+    font-size: 6.5rem;
+    line-height: 8rem;
+    margin-bottom: 50px;
+}
+
+.main-section p{
+    margin-bottom: 8rem;
+    width: 40rem;
+}
+
+.btn-grp{
+    width: 100%;
+    margin: 0 20rem;
+}
+.btn-grp button{
+    margin-right: 3rem;
+}
+
+  @for $i from 1 through 9 {
+    .tooltip#{$i} {
+        position: relative;
+        display: inline-block;
+      }
+      
+      .tooltip#{$i} .tooltiptext#{$i} {
+        visibility: hidden;
+        width: 25rem;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+      
+        /* Position the tooltip */
+        position: absolute;
+        z-index: 1;
+      }
+      
+      .tooltip#{$i}:hover .tooltiptext#{$i} {
+        visibility: visible;
+      }
+  }
+
+  /* ----------------Next page------------------------------------- */
+  .common-section{
+      width: 100%;
+      height: 70rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+       margin-bottom: 9rem;
+       padding: 0 20rem;
+  }
+
+  .common-section .left-side{
+      width:inherit;
+      height:inherit;
+  }
+
+  .common-section .left-side figure{
+width: 20rem;
+height: 60rem;
+background-color: #2a568b54;
+border-radius: 2rem;
+margin-left: 7rem;
+margin-top: 2.5rem;
+
+  }
+
+
+  .common-section .left-side img{
+      width: 50rem;
+      height: 60rem;
+      border-radius: 2rem;
+      margin-left: 10rem;
+      margin-top:2.4rem;
+
+  }
+
+/*    ------  Content--------*/   
+.common-section .right-side{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.common-section .right-side h2{
+    width: 40rem;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 5.5rem;
+    line-height: 6rem;
+    margin-bottom:3rem;
+    text-transform: capitalize;
+}
+ 
+.common-section .right-side p{
+    width: 40.3rem;
+    height: 9rem;
+    text-transform: lowercase;
+}
+
+.common-section .right-side .common-button{
+    padding: 1rem 3rem;
+    background-color: var(--primary-button-background);
+    color: #fff;
+}
+
+.common-section .right-side button:last-child{
+        color: var(--main-color);
+        background-color: transparent;
+}
+
+.common-section .right-side .common-button:hover{
+    background-color: #cc491d;
+}
+
+.common-section .right-side .common-button-normal:hover{
+    background-color: var(--primary-button-background);
+    color: #ffff;
+}
+
+
+/*------responsive------*/
+@media (max-width:600px) {
+    header, .main-section, .common-section{
+        padding: 0 5rem;
+    }
+
+    header nav{
+        padding-top:1rem;
+        display: flex;
+        flex-grow: column;
+        align-items: flex-start;
+    }
+
+    header nav .left-side-menu{
+        width: 100%;
+        display: block;
+        order: 2;
+    }
+
+    header nav .left-side-menu img{
+        display: block;
+        width: 100%;
+    }
+
+    .main-section{
+        width: 100%;
+        height: 80vh;
+        display: flex;
+        flex-flow: column;
+    }
+
+    .main-section .left-side-menu{
+        order:2;
+        width: 100%;
+    }
+
+    .main-section-left{
+        flex-wrap: wrap;
+    }
+   
+} 
+
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 110px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown1 {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content1 {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 110px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    margin:0 10rem 5rem 6rem ;
+    z-index: 1;
+  }
+  
+  .dropdown1:hover .dropdown-content1 {
+    display: block;
+  }
+
+  .pyy3 {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 110px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    margin:0 10rem 5rem 6rem ;
+    z-index: 1;
+  }
+  
+  .py3:hover .pyy3 {
+    display: block;
+  }
+
+
+
+
